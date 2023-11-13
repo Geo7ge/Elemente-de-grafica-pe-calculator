@@ -28,3 +28,18 @@ D:\AN 3 SEMESTRU 1\EGC\Andries Serban\tema_lab2\obj\Debug\tema_lab2.csproj.CoreC
 D:\AN 3 SEMESTRU 1\EGC\Andries Serban\tema_lab2\obj\Debug\tema_lab2.csproj.CopyComplete
 D:\AN 3 SEMESTRU 1\EGC\Andries Serban\tema_lab2\obj\Debug\tema_lab2.exe
 D:\AN 3 SEMESTRU 1\EGC\Andries Serban\tema_lab2\obj\Debug\tema_lab2.pdb
+D:\AN 3 SEMESTRU 1\EGC\Andries Serban\Andries George Serban\bin\Debug\tema_lab2.exe.config
+D:\AN 3 SEMESTRU 1\EGC\Andries Serban\Andries George Serban\bin\Debug\tema_lab2.exe
+D:\AN 3 SEMESTRU 1\EGC\Andries Serban\Andries George Serban\bin\Debug\tema_lab2.pdb
+D:\AN 3 SEMESTRU 1\EGC\Andries Serban\Andries George Serban\bin\Debug\OpenTK.dll
+D:\AN 3 SEMESTRU 1\EGC\Andries Serban\Andries George Serban\bin\Debug\OpenTK.GLControl.dll
+D:\AN 3 SEMESTRU 1\EGC\Andries Serban\Andries George Serban\bin\Debug\OpenTK.pdb
+D:\AN 3 SEMESTRU 1\EGC\Andries Serban\Andries George Serban\bin\Debug\OpenTK.xml
+D:\AN 3 SEMESTRU 1\EGC\Andries Serban\Andries George Serban\bin\Debug\OpenTK.GLControl.pdb
+D:\AN 3 SEMESTRU 1\EGC\Andries Serban\Andries George Serban\bin\Debug\OpenTK.GLControl.xml
+D:\AN 3 SEMESTRU 1\EGC\Andries Serban\Andries George Serban\obj\Debug\tema_lab2.csproj.AssemblyReference.cache
+D:\AN 3 SEMESTRU 1\EGC\Andries Serban\Andries George Serban\obj\Debug\tema_lab2.csproj.SuggestedBindingRedirects.cache
+D:\AN 3 SEMESTRU 1\EGC\Andries Serban\Andries George Serban\obj\Debug\tema_lab2.csproj.CoreCompileInputs.cache
+D:\AN 3 SEMESTRU 1\EGC\Andries Serban\Andries George Serban\obj\Debug\tema_lab2.csproj.CopyComplete
+D:\AN 3 SEMESTRU 1\EGC\Andries Serban\Andries George Serban\obj\Debug\tema_lab2.exe
+D:\AN 3 SEMESTRU 1\EGC\Andries Serban\Andries George Serban\obj\Debug\tema_lab2.pdb

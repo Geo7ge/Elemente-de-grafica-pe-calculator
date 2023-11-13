@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using OpenTK;
 using OpenTK.Graphics.OpenGL;
 using OpenTK.Input;
@@ -18,12 +16,15 @@ using OpenTK.Platform;
 **/
 namespace OpenTK_console_sample01 {
     class SimpleWindow : GameWindow {
-        private float xPosition = 0; // lab2 ex 2
+        private float xPosition = 0; // lab 2 ex 2
+        private Vector2[] objectPosition = new Vector2[3];
+        private float rotationAngle = 0.0f;
+
 
         // Constructor.
         public SimpleWindow() : base(800, 600) {
             KeyDown += Keyboard_KeyDown;
-            MouseMove += Mouse_Move;// lab2 ex 2
+            MouseMove += Mouse_Move;// lab 2 ex 2
         }
 
         void Mouse_Move(object sender, MouseMoveEventArgs e)// lab2 ex 2
@@ -46,9 +47,28 @@ namespace OpenTK_console_sample01 {
 
         // Setare mediu OpenGL și încarcarea resurselor (dacă e necesar) - de exemplu culoarea de
         // fundal a ferestrei 3D.
-        // Atenție! Acest cod se execută înainte de desenarea efectivă a scenei 3D.
+        // Atenție! Acest cod se execută înainte de desenarea efectivă a scenei 3D.v
         protected override void OnLoad(EventArgs e) {
             GL.ClearColor(Color.MidnightBlue);
+            //string filePath = Path.Combine("Data", "TextFile1.txt");
+            string filePath = "TextFile1.txt";
+
+            // lab 3 incarcare date din fisier
+            if (File.Exists(filePath))
+            {
+                using (StreamReader reader = new StreamReader(filePath))
+                {
+                    int i = 0;
+                    while (!reader.EndOfStream)
+                    {
+                        string line = reader.ReadLine();
+                        Console.WriteLine(line);
+                        string[] date = line.Split(' ');
+                        objectPosition[i++] = new Vector2(float.Parse(date[0]), float.Parse(date[1]));
+                    }
+                }
+            }// lab 3 incarcare date din fisier
+
         }
 
         // Inițierea afișării și setarea viewport-ului grafic. Metoda este invocată la redimensionarea
@@ -66,7 +86,9 @@ namespace OpenTK_console_sample01 {
         // Secțiunea pentru "game logic"/"business logic". Tot ce se execută în această secțiune va fi randat
         // automat pe ecran în pasul următor - control utilizator, actualizarea poziției obiectelor, etc.
         protected override void OnUpdateFrame(FrameEventArgs e) {
-            // Momentan aplicația nu face nimic!
+            MouseState mouse = Mouse.GetState();
+            rotationAngle = (mouse.X - Width / 2) / (float)Width;
+
             if (Keyboard.GetState().IsKeyDown(Key.A))// lab2 ex 2
             {
                 xPosition -= 0.1f;
@@ -84,6 +106,7 @@ namespace OpenTK_console_sample01 {
 
             // Modul imediat! Suportat până la OpenGL 3.5 (este ineficient din cauza multiplelor apeluri de
             // funcții).
+            GL.Rotate(rotationAngle * 360.0f, 0, 0, 1);
             GL.Begin(PrimitiveType.Triangles);
 
             GL.Color3(Color.MidnightBlue);
@@ -92,6 +115,11 @@ namespace OpenTK_console_sample01 {
             GL.Vertex2(0.0f + xPosition, -1.0f);
             GL.Color3(Color.Ivory);
             GL.Vertex2(1.0f + xPosition, 1.0f);
+
+            GL.Color3(Color.DarkRed);
+            GL.Vertex2(objectPosition[0]);
+            GL.Vertex2(objectPosition[1]);
+            GL.Vertex2(objectPosition[2]);
 
             GL.End();
             // Sfârșitul modului imediat!
