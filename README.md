@@ -24,3 +24,9 @@ C. Rezultatul este un desen care este de folos atunci cand dorim sa cream forme 
 D. Rezultatul este o multime de triunghiuri conectate intre ele care poate fi folosita in a crea forme complexe.
 3.6. Utilizarea de culori diferite si a unui gradient prezinta multe avantaje precum perceptia adancimii formei desenate, lumina si umbre
 3.7. Un gradient de culoare reprezinta tranzitia intre 2 sau mai multe culori cu scopul de a creea un efect vizual placut.
+
+Laborator 10 raspunsuri:
+10.1 Observ ca ordinea de texturare a imaginilor este importanta, si nerespectarea ordinei poate duce la efecte nedorite.
+10.2 Formatele de imagine care pot fi aplicate în procesul de texturare sunt: BMP, GIF, HDR, JPG, LBM, PCD, PCX, PIC, PNG, PNM, PSD, TGA, TIFF, și WBMP.
+10.3 Daca modificam direct culorile RGB ale unui obiect texturat aceste modificari vor afecta cum este afisata textura pe obiect. Coloarea texturii se va amesteca cu culoarea obiectului.
+10.4 Atunci cand lumina este activata obiectele pot creea umbre, iar atunci cand lumina este oprita acestea tind sa aiba o culoare mai uniforma si par mai putin realiste.
